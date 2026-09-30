@@ -1,0 +1,7 @@
+target/
+.tools/
+.env
+*.log
+
+
+evidence/baseline/*.xml

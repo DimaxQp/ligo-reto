@@ -1,0 +1,21 @@
+{
+  "name": "qa-automation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web Cucumber/Playwright, API Karate y Android Appium",
+  "engines": {
+    "node": "^24.12.0"
+  },
+  "scripts": {
+    "install:modules": "npm --prefix web ci && npm --prefix mobile ci",
+    "web:test": "npm --prefix web test",
+    "web:smoke": "npm --prefix web run test:smoke",
+    "web:regression": "npm --prefix web run test:regression",
+    "api:test": "node scripts/run-api.mjs",
+    "api:smoke": "node scripts/run-api.mjs --smoke",
+    "mobile:test": "npm --prefix mobile test",
+    "mobile:smoke": "npm --prefix mobile run test:smoke",
+    "check": "npm --prefix web run typecheck && npm --prefix web run test:dry-run && npm --prefix mobile run typecheck",
+    "evidence:collect": "node scripts/collect-evidence.mjs"
+  }
+}

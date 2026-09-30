@@ -1,0 +1,32 @@
+{
+  "name": "qa-web",
+  "version": "2.0.0",
+  "private": true,
+  "description": "SauceDemo: Cucumber + Gherkin + Playwright + TypeScript",
+  "engines": {
+    "node": "^22.12.0 || ^24.0.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node scripts/clean-allure.cjs && cucumber-js",
+    "test:smoke": "node scripts/clean-allure.cjs && cucumber-js --tags @smoke",
+    "test:regression": "node scripts/clean-allure.cjs && node scripts/run-regression.cjs",
+    "test:dry-run": "cucumber-js --profile dry",
+    "browsers:install": "playwright install chromium firefox",
+    "report": "node scripts/open-report.cjs",
+    "allure:generate": "allure generate evidence/allure-results --clean -o evidence/allure-report",
+    "allure:open": "allure open evidence/allure-report",
+    "allure:serve": "allure serve evidence/allure-results"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "13.2.1",
+    "@playwright/test": "1.63.0",
+    "@types/node": "24.10.1",
+    "allure-commandline": "2.46.1",
+    "allure-cucumberjs": "3.13.0",
+    "allure-js-commons": "3.13.0",
+    "dotenv": "18.0.4",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "generatedAt": "2026-09-28T21:35:16.908Z",
+  "runner": "Cucumber.js",
+  "cucumber": "13.2.1",
+  "playwright": "1.63.0",
+  "command": "npm run test:regression",
+  "runs": [
+    {
+      "browser": "chromium",
+      "scenarios": 8,
+      "passed": 8,
+      "failedOrIncomplete": 0,
+      "details": [
+        {
+          "name": "WEB-03 Rechazar contraseña incorrecta",
+          "passed": true
+        },
+        {
+          "name": "WEB-02 Rechazar cuenta bloqueada",
+          "passed": true
+        },
+        {
+          "name": "WEB-01 Comprar dos productos con importes correctos",
+          "passed": true
+        },
+        {
+          "name": "WEB-04a Un campo obligatorio vacío impide avanzar",
+          "passed": true
+        },
+        {
+          "name": "WEB-04b Un campo obligatorio vacío impide avanzar",
+          "passed": true
+        },
+        {
+          "name": "WEB-04c Un campo obligatorio vacío impide avanzar",
+          "passed": true
+        },
+        {
+          "name": "WEB-05 Quitar un producto recalcula el importe",
+          "passed": true
+        },
+        {
+          "name": "WEB-06 Cancelar checkout conserva la selección",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "scenarios": 8,
+      "passed": 8,
+      "failedOrIncomplete": 0,
+      "details": [
+        {
+          "name": "WEB-03 Rechazar contraseña incorrecta",
+          "passed": true
+        },
+        {
+          "name": "WEB-02 Rechazar cuenta bloqueada",
+          "passed": true
+        },
+        {
+          "name": "WEB-01 Comprar dos productos con importes correctos",
+          "passed": true
+        },
+        {
+          "name": "WEB-04a Un campo obligatorio vacío impide avanzar",
+          "passed": true
+        },
+        {
+          "name": "WEB-04b Un campo obligatorio vacío impide avanzar",
+          "passed": true
+        },
+        {
+          "name": "WEB-04c Un campo obligatorio vacío impide avanzar",
+          "passed": true
+        },
+        {
+          "name": "WEB-05 Quitar un producto recalcula el importe",
+          "passed": true
+        },
+        {
+          "name": "WEB-06 Cancelar checkout conserva la selección",
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "scenarioOutlines": 6,
+  "allure": {
+    "passed": 16,
+    "stepScreenshots": 116
+  },
+  "architecture": {
+    "pageObjects": 6,
+    "stepFiles": 6,
+    "locatorClasses": 6
+  }
+}

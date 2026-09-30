@@ -1,0 +1,15 @@
+node_modules/
+.tools/
+apps/*.apk
+.env
+evidence/logs/
+evidence/appium/
+evidence/junit/
+evidence/*.png
+evidence/*.xml
+evidence/*.json
+evidence/*.txt
+*.log
+
+
+evidence/checkout/

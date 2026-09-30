@@ -1,0 +1,391 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "@puppeteer/browsers": {
+      "name": "@puppeteer/browsers",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "extract-zip"
+      ],
+      "effects": [
+        "@wdio/utils"
+      ],
+      "range": "<=2.13.2",
+      "nodes": [
+        "node_modules/@puppeteer/browsers"
+      ],
+      "fixAvailable": {
+        "name": "@wdio/mocha-framework",
+        "version": "7.7.3",
+        "isSemVerMajor": true
+      }
+    },
+    "@wdio/appium-service": {
+      "name": "@wdio/appium-service",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@wdio/config",
+        "@wdio/utils",
+        "webdriverio"
+      ],
+      "effects": [],
+      "range": ">=8.15.0",
+      "nodes": [
+        "node_modules/@wdio/appium-service"
+      ],
+      "fixAvailable": {
+        "name": "@wdio/appium-service",
+        "version": "8.18.0",
+        "isSemVerMajor": true
+      }
+    },
+    "@wdio/cli": {
+      "name": "@wdio/cli",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@wdio/config",
+        "@wdio/globals",
+        "@wdio/utils",
+        "webdriverio"
+      ],
+      "effects": [],
+      "range": ">=8.15.0",
+      "nodes": [
+        "node_modules/@wdio/cli"
+      ],
+      "fixAvailable": {
+        "name": "@wdio/cli",
+        "version": "8.14.6",
+        "isSemVerMajor": true
+      }
+    },
+    "@wdio/config": {
+      "name": "@wdio/config",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@wdio/utils"
+      ],
+      "effects": [],
+      "range": ">=8.15.0",
+      "nodes": [
+        "node_modules/@wdio/config"
+      ],
+      "fixAvailable": true
+    },
+    "@wdio/globals": {
+      "name": "@wdio/globals",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "expect-webdriverio",
+        "webdriverio"
+      ],
+      "effects": [],
+      "range": ">=8.15.0",
+      "nodes": [
+        "node_modules/@wdio/globals"
+      ],
+      "fixAvailable": {
+        "name": "@wdio/globals",
+        "version": "8.14.6",
+        "isSemVerMajor": true
+      }
+    },
+    "@wdio/local-runner": {
+      "name": "@wdio/local-runner",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@wdio/runner",
+        "expect-webdriverio"
+      ],
+      "effects": [],
+      "range": ">=8.15.0",
+      "nodes": [
+        "node_modules/@wdio/local-runner"
+      ],
+      "fixAvailable": {
+        "name": "@wdio/local-runner",
+        "version": "8.14.6",
+        "isSemVerMajor": true
+      }
+    },
+    "@wdio/mocha-framework": {
+      "name": "@wdio/mocha-framework",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@wdio/utils",
+        "mocha"
+      ],
+      "effects": [],
+      "range": ">=7.7.4",
+      "nodes": [
+        "node_modules/@wdio/mocha-framework"
+      ],
+      "fixAvailable": {
+        "name": "@wdio/mocha-framework",
+        "version": "7.7.3",
+        "isSemVerMajor": true
+      }
+    },
+    "@wdio/runner": {
+      "name": "@wdio/runner",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@wdio/config",
+        "@wdio/globals",
+        "@wdio/utils",
+        "expect-webdriverio",
+        "webdriver",
+        "webdriverio"
+      ],
+      "effects": [
+        "@wdio/local-runner"
+      ],
+      "range": ">=8.15.0",
+      "nodes": [
+        "node_modules/@wdio/runner"
+      ],
+      "fixAvailable": {
+        "name": "@wdio/local-runner",
+        "version": "8.14.6",
+        "isSemVerMajor": true
+      }
+    },
+    "@wdio/utils": {
+      "name": "@wdio/utils",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@puppeteer/browsers"
+      ],
+      "effects": [
+        "@wdio/appium-service",
+        "@wdio/cli",
+        "@wdio/config",
+        "@wdio/mocha-framework",
+        "@wdio/runner",
+        "webdriver",
+        "webdriverio"
+      ],
+      "range": ">=8.15.0",
+      "nodes": [
+        "node_modules/@wdio/utils"
+      ],
+      "fixAvailable": {
+        "name": "@wdio/mocha-framework",
+        "version": "7.7.3",
+        "isSemVerMajor": true
+      }
+    },
+    "expect-webdriverio": {
+      "name": "expect-webdriverio",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@wdio/globals",
+        "webdriverio"
+      ],
+      "effects": [
+        "@wdio/globals",
+        "@wdio/local-runner",
+        "@wdio/runner"
+      ],
+      "range": "4.0.0-alpha.0 - 4.0.0-alpha.6 || >=4.2.8",
+      "nodes": [
+        "node_modules/expect-webdriverio"
+      ],
+      "fixAvailable": {
+        "name": "@wdio/globals",
+        "version": "8.14.6",
+        "isSemVerMajor": true
+      }
+    },
+    "extract-zip": {
+      "name": "extract-zip",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1139346,
+          "name": "extract-zip",
+          "dependency": "extract-zip",
+          "title": "extract-zip unvalidated symlink path traversal",
+          "url": "https://github.com/advisories/GHSA-jmr9-qjv8-65gv",
+          "severity": "high",
+          "cwe": [
+            "CWE-22"
+          ],
+          "cvss": {
+            "score": 8.1,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N"
+          },
+          "range": "<=2.0.1"
+        },
+        {
+          "source": 1193685,
+          "name": "extract-zip",
+          "dependency": "extract-zip",
+          "title": "extract-zip allows arbitrary file writes through symlink archive entries",
+          "url": "https://github.com/advisories/GHSA-7pqw-9j4j-h8q3",
+          "severity": "high",
+          "cwe": [
+            "CWE-22"
+          ],
+          "cvss": {
+            "score": 8.1,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H"
+          },
+          "range": "<=2.0.1"
+        }
+      ],
+      "effects": [
+        "@puppeteer/browsers"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/extract-zip"
+      ],
+      "fixAvailable": {
+        "name": "@wdio/mocha-framework",
+        "version": "7.7.3",
+        "isSemVerMajor": true
+      }
+    },
+    "mocha": {
+      "name": "mocha",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "serialize-javascript"
+      ],
+      "effects": [
+        "@wdio/mocha-framework"
+      ],
+      "range": "8.2.0 - 12.0.0-beta-2",
+      "nodes": [
+        "node_modules/mocha"
+      ],
+      "fixAvailable": {
+        "name": "@wdio/mocha-framework",
+        "version": "7.7.3",
+        "isSemVerMajor": true
+      }
+    },
+    "serialize-javascript": {
+      "name": "serialize-javascript",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1113686,
+          "name": "serialize-javascript",
+          "dependency": "serialize-javascript",
+          "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
+          "url": "https://github.com/advisories/GHSA-5c6j-r48x-rmvq",
+          "severity": "high",
+          "cwe": [
+            "CWE-96"
+          ],
+          "cvss": {
+            "score": 8.1,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          },
+          "range": "<=7.0.2"
+        },
+        {
+          "source": 1119440,
+          "name": "serialize-javascript",
+          "dependency": "serialize-javascript",
+          "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
+          "url": "https://github.com/advisories/GHSA-qj8w-gfj5-8c6v",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-400",
+            "CWE-834"
+          ],
+          "cvss": {
+            "score": 5.9,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": ">=5.0.0 <7.0.5"
+        }
+      ],
+      "effects": [
+        "mocha"
+      ],
+      "range": "<=7.0.4",
+      "nodes": [
+        "node_modules/serialize-javascript"
+      ],
+      "fixAvailable": {
+        "name": "@wdio/mocha-framework",
+        "version": "7.7.3",
+        "isSemVerMajor": true
+      }
+    },
+    "webdriver": {
+      "name": "webdriver",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@wdio/config",
+        "@wdio/utils"
+      ],
+      "effects": [],
+      "range": ">=8.15.0",
+      "nodes": [
+        "node_modules/webdriver"
+      ],
+      "fixAvailable": true
+    },
+    "webdriverio": {
+      "name": "webdriverio",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@wdio/config",
+        "@wdio/utils",
+        "webdriver"
+      ],
+      "effects": [
+        "@wdio/appium-service",
+        "@wdio/globals",
+        "expect-webdriverio"
+      ],
+      "range": ">=8.15.0",
+      "nodes": [
+        "node_modules/webdriverio"
+      ],
+      "fixAvailable": {
+        "name": "webdriverio",
+        "version": "8.14.6",
+        "isSemVerMajor": true
+      }
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 1,
+      "high": 14,
+      "critical": 0,
+      "total": 15
+    },
+    "dependencies": {
+      "prod": 1,
+      "dev": 787,
+      "optional": 74,
+      "peer": 8,
+      "peerOptional": 0,
+      "total": 787
+    }
+  }
+}

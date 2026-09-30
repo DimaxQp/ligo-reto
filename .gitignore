@@ -1,0 +1,13 @@
+node_modules/
+.tools/
+**/dist/
+**/target/
+.env
+.env.*
+!.env.example
+*.log
+entregables/
+mobile/apps/*.apk
+evidence/runs/
+
+.vscode/

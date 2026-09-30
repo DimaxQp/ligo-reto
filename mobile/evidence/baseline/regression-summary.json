@@ -1,0 +1,48 @@
+{
+  "verifiedAt": "2026-09-30T14:04:48.460Z",
+  "android": "11",
+  "apiLevel": 30,
+  "device": "Pixel 2 x86_64 emulator",
+  "app": {
+    "version": "2.2.0",
+    "sourceCommit": "36b012eecdf6a2b488b9504e16b3d0c3ca9a0e7b",
+    "filename": "mda-2.2.0-25.apk",
+    "url": "https://github.com/saucelabs/my-demo-app-android/releases/download/2.2.0/mda-2.2.0-25.apk",
+    "sha256": "318ef64bdcaff18e576d962ab1f557e0a2683b9b5210a6bb6b25cb0caeef62b4"
+  },
+  "passed": 4,
+  "failed": 0,
+  "cases": [
+    {
+      "title": "MOB-01 @smoke compra completa con pago y confirmacion",
+      "passed": true,
+      "duration": 43965,
+      "timestamp": "2026-09-30T14:03:42.315Z"
+    },
+    {
+      "title": "MOB-02 @regression modificar cantidad recalcula importe",
+      "passed": true,
+      "duration": 7137,
+      "timestamp": "2026-09-30T14:03:54.202Z"
+    },
+    {
+      "title": "MOB-03 @regression eliminar ultimo producto deja carrito vacio",
+      "passed": true,
+      "duration": 11438,
+      "timestamp": "2026-09-30T14:04:10.190Z"
+    },
+    {
+      "title": "MOB-04 @regression cantidad cero impide agregar y no se vuelve negativa",
+      "passed": true,
+      "duration": 5934,
+      "timestamp": "2026-09-30T14:04:20.795Z"
+    }
+  ],
+  "e2e": "Catálogo → detalle → carrito → login → dirección → pago de prueba → revisión → confirmación → carrito vacío",
+  "checkoutScreenshots": [
+    "01-direccion.png",
+    "02-pago-demo.png",
+    "03-revision.png",
+    "04-confirmacion.png"
+  ]
+}

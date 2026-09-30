@@ -1,0 +1,38 @@
+{
+  "verifiedAt": "2026-09-29T15:00:53.449Z",
+  "web": [
+    {
+      "browser": "chromium",
+      "passed": 8,
+      "failed": 0
+    },
+    {
+      "browser": "firefox",
+      "passed": 8,
+      "failed": 0
+    }
+  ],
+  "api": {
+    "passed": 9,
+    "failed": 0,
+    "resultDate": "2026-09-29 09:50:55 a. m."
+  },
+  "mobile": {
+    "passed": 4,
+    "failed": 0,
+    "android": "11",
+    "apiLevel": 30,
+    "verifiedAt": "2026-09-30T14:04:48.460Z",
+    "fullCheckout": true,
+    "checkoutScreenshots": 4
+  },
+  "githubActions": "Configurado, pendiente primera ejecución remota",
+  "webExecution": {
+    "verifiedAt": "2026-09-29T20:37:33.739Z",
+    "runtime": "Cucumber + tsx/cjs",
+    "source": "TypeScript directo",
+    "generatedDist": false,
+    "passed": 16,
+    "stepScreenshots": 116
+  }
+}
