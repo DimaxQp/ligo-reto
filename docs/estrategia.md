@@ -30,6 +30,6 @@ PR ejecuta smoke; merge ejecuta las suites; nightly agrega el segundo navegador 
 
 ## Límites y siguiente versión
 
-Antes de ampliar cobertura: revisar el resultado final de Mobile en GitHub Actions; Web y API ya aprobaron. Mobile ya cuenta con baseline local de cuatro casos aprobados en Android API 30. Después: entorno API controlado, limpieza recuperable ante pérdida de respuesta de creación, negativos de checkout Mobile y matriz Android adicional. No se presenta análisis estático como evidencia de estabilidad runtime.
+Antes de ampliar cobertura: mantener la validación en GitHub Actions; Web, API y Mobile ya aprobaron. Mobile ya cuenta con baseline local de cuatro casos aprobados en Android API 30. Después: entorno API controlado, limpieza recuperable ante pérdida de respuesta de creación, negativos de checkout Mobile y matriz Android adicional. No se presenta análisis estático como evidencia de estabilidad runtime.
 
 Detalles: [Web](../web/docs/decisiones.md), [API](../api/docs/decisiones.md), [Mobile](../mobile/docs/decisiones.md).

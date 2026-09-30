@@ -10,7 +10,7 @@
 
 ## Acceso y configuración de GitHub
 
-Repositorio privado: https://github.com/DimaxQp/ligo-reto. El propietario debe dar acceso al evaluador desde Settings → Collaborators.
+Repositorio público: https://github.com/DimaxQp/ligo-reto. El evaluador puede consultar el código y clonarlo sin invitación.
 
 Las suites usan cuentas públicas de las aplicaciones demo y datos ficticios. No requieren secretos personalizados. GitHub proporciona GITHUB_TOKEN automáticamente; el workflow limita sus permisos a contents: read. No se utiliza la contraseña personal de GitHub en pruebas, archivos ni secretos.
 
@@ -20,4 +20,4 @@ El guion de video está preparado en [guion-video.md](guion-video.md); la grabac
 
 ## Primera ejecución remota
 
-[GitHub Actions: ejecución inicial](https://github.com/DimaxQp/ligo-reto/actions/runs/36730241985). Web y API aprobados; Mobile en curso al publicar esta nota. Descargar web-evidence, api-evidence y, cuando termine, mobile-evidence desde esa página.
+[GitHub Actions: ejecución inicial](https://github.com/DimaxQp/ligo-reto/actions/runs/36730241985). Web, API y Mobile aprobados al publicar esta nota. Descargar web-evidence, api-evidence y mobile-evidence desde esa página.

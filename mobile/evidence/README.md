@@ -12,6 +12,6 @@ Los diagnósticos históricos permanecen locales. Para generar un diagnóstico a
 
 [npm audit histórico](baseline/npm-audit.json): las dependencias de herramientas todavía reportan 15 avisos transitivos (1 moderate y 14 high); no se aplicaron downgrades incompatibles.
 
-GitHub Actions está ejecutando por primera vez esta suite. Una ejecución local en un emulador no garantiza estabilidad en toda la matriz de dispositivos.
+La primera ejecución de esta suite en GitHub Actions aprobó. Una ejecución local en un emulador no garantiza estabilidad en toda la matriz de dispositivos.
 
 La regresión actual incluye el E2E ampliado MOB-01: login, dirección, pago ficticio, revisión de datos/importes, confirmación y carrito vacío al continuar. Las cuatro capturas de checkout/ muestran dirección, pago, revisión y Checkout Complete. Smoke E2E aprobado y regresión completa 4/4 aprobada.

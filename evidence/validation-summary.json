@@ -30,8 +30,8 @@
     "runUrl": "https://github.com/DimaxQp/ligo-reto/actions/runs/36730241985",
     "web": "success",
     "api": "success",
-    "mobile": "in_progress",
-    "checkedAt": "2026-09-30T14:41:39.638Z"
+    "mobile": "success",
+    "checkedAt": "2026-09-30T15:00:20.133Z"
   },
   "webExecution": {
     "verifiedAt": "2026-09-29T20:37:33.739Z",

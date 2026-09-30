@@ -8,6 +8,6 @@
 | API: precio y depósito | API-06 | [boundaries.feature](../api/src/test/resources/features/boundaries.feature) | Karate; ejecución local aprobada |
 | Mobile: productos → carrito → login → dirección → pago → revisión → confirmación | MOB-01 | [cart.spec.ts](../mobile/tests/cart.spec.ts) | JUnit, capturas y XML; 4/4 aprobados en Android API 30 |
 | Mobile: cantidades, eliminar y frontera cero | MOB-02 a MOB-04 | [cart.spec.ts](../mobile/tests/cart.spec.ts) | JUnit, capturas y XML; 4/4 aprobados en Android API 30 |
-| CI/CD por evento para las tres capas | Smoke / suite / nightly | [qa.yml](../.github/workflows/qa.yml) | [primera ejecución de GitHub Actions](https://github.com/DimaxQp/ligo-reto/actions/runs/36730241985); Web/API aprobados, Mobile en curso |
+| CI/CD por evento para las tres capas | Smoke / suite / nightly | [qa.yml](../.github/workflows/qa.yml) | [primera ejecución de GitHub Actions](https://github.com/DimaxQp/ligo-reto/actions/runs/36730241985); Web/API/Mobile aprobados |
 
 Matrices detalladas: [Web](../web/docs/trazabilidad.md), [API](../api/docs/trazabilidad.md), [Mobile](../mobile/docs/trazabilidad.md).

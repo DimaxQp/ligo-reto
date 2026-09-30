@@ -30,4 +30,4 @@ Usa tus palabras y comprende el código antes de grabar. No presentes Mobile com
 - **¿Cómo administras datos?** Contextos nuevos, UUID por reserva y reinstalación de app demo. Ningún caso consume la salida de otro.
 - **¿Cómo controlas flakiness?** Esperas por condición, versión de app fija, sin sleeps, trace y cero reintentos automáticos de tests.
 - **¿Qué ejecutas como smoke?** Compra y bloqueo Web, CRUD y autorización API, compra completa Mobile con pago de prueba y confirmación.
-- **¿Qué mejorarías?** Validación pendiente de CI y ampliación de dispositivos antes de aumentar cobertura, entorno API controlado y datos recuperables aun si falla la respuesta POST.
+- **¿Qué mejorarías?** Ampliación de dispositivos antes de aumentar cobertura, entorno API controlado y datos recuperables aun si falla la respuesta POST.
