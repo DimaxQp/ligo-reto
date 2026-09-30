@@ -1,6 +1,6 @@
 # Diseño de pruebas
 
-Las tablas de cada módulo incluyen ID, escenario, prioridad, técnica, automatización, selección y exclusiones. Los casos automatizados de las tres capas cuentan con ejecución local aprobada; CI remoto sigue pendiente.
+Las tablas de cada módulo incluyen ID, escenario, prioridad, técnica, automatización, selección y exclusiones. Los casos automatizados de las tres capas cuentan con ejecución local aprobada; Web y API también aprobaron en CI; Mobile sigue en ejecución remota.
 
 - [Casos Web](../web/docs/casos.md): 6 outlines, 8 ejemplos.
 - [Casos API](../api/docs/casos.md): 9 escenarios expandidos.

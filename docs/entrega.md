@@ -17,3 +17,7 @@ Las suites usan cuentas públicas de las aplicaciones demo y datos ficticios. No
 Si se adapta a un entorno privado, configurar credenciales en Settings → Secrets and variables → Actions e inyectarlas como variables de entorno en el job correspondiente. Revisar las capturas y reportes antes de compartir datos privados.
 
 El guion de video está preparado en [guion-video.md](guion-video.md); la grabación de la presentación todavía debe realizarse.
+
+## Primera ejecución remota
+
+[GitHub Actions: ejecución inicial](https://github.com/DimaxQp/ligo-reto/actions/runs/36730241985). Web y API aprobados; Mobile en curso al publicar esta nota. Descargar web-evidence, api-evidence y, cuando termine, mobile-evidence desde esa página.

@@ -26,7 +26,13 @@
     "fullCheckout": true,
     "checkoutScreenshots": 4
   },
-  "githubActions": "Configurado, pendiente primera ejecución remota",
+  "githubActions": {
+    "runUrl": "https://github.com/DimaxQp/ligo-reto/actions/runs/36730241985",
+    "web": "success",
+    "api": "success",
+    "mobile": "in_progress",
+    "checkedAt": "2026-09-30T14:41:39.638Z"
+  },
   "webExecution": {
     "verifiedAt": "2026-09-29T20:37:33.739Z",
     "runtime": "Cucumber + tsx/cjs",

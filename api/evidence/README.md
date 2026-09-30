@@ -10,4 +10,4 @@ Reporte HTML completo en `target/karate-reports/karate-summary.html`, regenerabl
 
 Primer run durante desarrollo: fallos 418 por configuración de Accept de una sola petición. Se corrigió en el cliente y la suite completa pasó. Se consultaron por UUID las dos creaciones potencialmente incompletas de ese run: ya no había reservas coincidentes. No se borraron datos de terceros.
 
-Actions aún no ejecutado; no se presenta el run local como evidencia de CI.
+API también aprobó en la [primera ejecución de GitHub Actions](https://github.com/DimaxQp/ligo-reto/actions/runs/36730241985). Su artifact api-evidence contiene la evidencia remota.

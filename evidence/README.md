@@ -7,7 +7,7 @@ Los resultados originales permanecen en cada módulo. Ejecuta npm run evidence:c
 - Web: 8/8 Chromium y 8/8 Firefox, headless. TypeScript y dry-run aprobados.
 - API: 9/9 escenarios Karate contra el servicio público. Reporte en api/target/karate-reports.
 - Mobile: 4/4 aprobados en Android 11 / API 30, Pixel 2 x86_64. Capturas y XML de los cuatro casos, JUnit y logs disponibles. Appium Doctor: cero correcciones obligatorias.
-- CI: configuración común preparada; pendiente ejecutar en GitHub.
+- CI: Web y API aprobados; Mobile en curso en la [primera ejecución de GitHub Actions](https://github.com/DimaxQp/ligo-reto/actions/runs/36730241985).
 
 El resumen verificado está en [validation-summary.json](validation-summary.json). Los diagnósticos iniciales de bloqueo son históricos. Conserva reportes completos antes de nuevas ejecuciones y no uses evidencia Web/API para presentar Mobile como aprobado.
 

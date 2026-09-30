@@ -2,7 +2,7 @@
 
 Módulo Mobile del repositorio común, con Appium + WebdriverIO + TypeScript. Cubre producto, detalle, cantidades, carrito, login, dirección, pago de prueba, revisión y confirmación del pedido. Sus dependencias permanecen en mobile/ y el CI se configura en la raíz común.
 
-**Estado:** 4/4 tests aprobados en emulador Pixel 2 con Android 11 / API 30, APK 2.2.0 build 25. TypeScript y hash del APK verificados. La ejecución en GitHub Actions sigue pendiente.
+**Estado:** 4/4 tests aprobados en emulador Pixel 2 con Android 11 / API 30, APK 2.2.0 build 25. TypeScript y hash del APK verificados. La primera ejecución en GitHub Actions está en curso.
 
 ## Requisitos
 
@@ -57,7 +57,7 @@ evidence/                  Reportes y diagnóstico baseline
 
 ## CI/CD
 
-Publicar la raíz común que contiene web, api y mobile. El job mobile de [qa.yml](../.github/workflows/qa.yml) configura Node/JDK, driver, APK con checksum y Android API 30 x86_64. PR: MOB-01 smoke. Push main/master, nightly 03:00 Lima y ejecución manual: 4 casos. Sube artifacts durante 14 días aun con fallos. No usa secretos Sauce Labs. Falta su primera ejecución real en GitHub y configurar `mobile` como check requerido.
+Publicar la raíz común que contiene web, api y mobile. El job mobile de [qa.yml](../.github/workflows/qa.yml) configura Node/JDK, driver, APK con checksum y Android API 30 x86_64. PR: MOB-01 smoke. Push main/master, nightly 03:00 Lima y ejecución manual: 4 casos. Sube artifacts durante 14 días aun con fallos. No usa secretos Sauce Labs. La primera ejecución real en GitHub está en curso. Configurar `mobile` como check requerido es una mejora posterior a validar CI.
 
 ## Límites
 

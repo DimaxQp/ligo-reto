@@ -118,14 +118,14 @@ La recopilación conserva los resultados disponibles: **no ejecuta pruebas ni de
 
 Web también ejecuta typecheck y dry-run; Mobile comprueba TypeScript. CI instala el SDK/emulador para Mobile mediante android-emulator-runner. Los artifacts se suben aunque fallen pruebas y se conservan 14 días. Consulta Actions → ejecución → Artifacts.
 
-La programación requiere el workflow en la rama predeterminada y Actions habilitado. No se ha ejecutado aún este workflow en GitHub: la configuración local no equivale a una validación remota.
+La programación requiere el workflow en la rama predeterminada y Actions habilitado. La [primera ejecución de GitHub Actions](https://github.com/DimaxQp/ligo-reto/actions/runs/36730241985) aprobó Web y API; Mobile seguía en curso al actualizar esta guía. Consulta ese enlace para el resultado final.
 
 ## Estado comprobado y pendientes
 
 - Web integrado: 16/16 ejecuciones aprobadas en modo headless.
 - API: 9/9 escenarios aprobados contra Restful Booker.
 - Mobile: 4/4 casos aprobados en emulador Pixel 2, Android 11 / API 30. TypeScript, checksum del APK y comprobaciones obligatorias de Appium Doctor aprobados. SDK y JDK 17 locales; instrucciones en la guía Mobile.
-- CI: preparado, pendiente primera ejecución remota.
+- CI: Web y API aprobados; Mobile en curso.
 
 Consulta [evidence/README.md](evidence/README.md) para distinguir evidencia real de comprobaciones estáticas. La copia original de qa-web no se modificó durante la integración; a partir de ahora los cambios de este repositorio se realizan en web/.
 
