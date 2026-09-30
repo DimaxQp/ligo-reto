@@ -1,4 +1,4 @@
-name: QA Web API Mobile
+name: Pruebas de calidad · Tienda, reservas y aplicación Android
 on:
   pull_request:
   push:
@@ -16,27 +16,35 @@ concurrency:
 
 jobs:
   web:
+    name: Tienda web · Acceso, carrito y compra
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     defaults:
       run:
         working-directory: web
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-node@v5
+      - name: Obtener los archivos del proyecto
+        uses: actions/checkout@v5
+      - name: Preparar el motor para ejecutar las pruebas web
+        uses: actions/setup-node@v5
         with:
           node-version: '24.12.0'
           cache: npm
           cache-dependency-path: web/package-lock.json
-      - run: npm ci
-      - uses: actions/setup-java@v5
+      - name: Instalar las herramientas de prueba de la tienda
+        run: npm ci
+      - name: Preparar la herramienta para crear el informe visual
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
-      - run: npm run typecheck
-      - run: npm run test:dry-run
-      - run: npx playwright install --with-deps chromium firefox
-      - name: Web según evento
+      - name: Comprobar que el código de las pruebas web sea válido
+        run: npm run typecheck
+      - name: Comprobar que cada escenario tenga sus pasos definidos
+        run: npm run test:dry-run
+      - name: Instalar los navegadores de prueba
+        run: npx playwright install --with-deps chromium firefox
+      - name: Probar el acceso, el carrito y la compra en la tienda
         shell: bash
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
@@ -46,29 +54,33 @@ jobs:
           else
             npm run test:regression
           fi
-      - name: Generar Allure aun si hay pruebas fallidas
+      - name: Crear el informe visual de resultados, incluidos los fallos
         if: always()
         run: npm run allure:generate
-      - uses: actions/upload-artifact@v6
+      - name: Guardar los informes y las evidencias de la tienda
+        uses: actions/upload-artifact@v6
         if: always()
         with:
           name: web-evidence
           path: web/evidence
           retention-days: 14
   api:
+    name: Servicio de reservas · Datos y permisos de acceso
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     defaults:
       run:
         working-directory: api
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-java@v5
+      - name: Obtener los archivos del proyecto
+        uses: actions/checkout@v5
+      - name: Preparar el motor para ejecutar las pruebas de reservas
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
           cache: maven
-      - name: API según evento
+      - name: Probar la gestión de reservas y sus permisos de acceso
         shell: bash
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
@@ -76,7 +88,8 @@ jobs:
           else
             mvn -B -ntp test
           fi
-      - uses: actions/upload-artifact@v6
+      - name: Guardar los informes y resultados del servicio de reservas
+        uses: actions/upload-artifact@v6
         if: always()
         with:
           name: api-evidence
@@ -86,6 +99,7 @@ jobs:
           retention-days: 14
 
   mobile:
+    name: Aplicación Android · Carrito y compra completa
     runs-on: ubuntu-24.04
     timeout-minutes: 35
     defaults:
@@ -94,26 +108,34 @@ jobs:
     env:
       APPIUM_HOME: ${{ github.workspace }}/.tools/appium
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-node@v5
+      - name: Obtener los archivos del proyecto
+        uses: actions/checkout@v5
+      - name: Preparar el motor para ejecutar las pruebas de Android
+        uses: actions/setup-node@v5
         with:
           node-version: '24.12.0'
           cache: npm
           cache-dependency-path: mobile/package-lock.json
-      - uses: actions/setup-java@v5
+      - name: Preparar las herramientas necesarias para el teléfono virtual
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
-      - run: npm ci
-      - run: npm run typecheck
-      - run: npm run driver:install
-      - run: npm run app:download
-      - name: Enable KVM
+      - name: Instalar las herramientas de prueba de la aplicación
+        run: npm ci
+      - name: Comprobar que el código de las pruebas de Android sea válido
+        run: npm run typecheck
+      - name: Instalar el controlador que manejará el teléfono virtual
+        run: npm run driver:install
+      - name: Descargar y verificar la aplicación que se va a probar
+        run: npm run app:download
+      - name: Activar la aceleración del teléfono virtual
         run: |
           echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
-      - uses: reactivecircus/android-emulator-runner@v2
+      - name: Iniciar el teléfono virtual y probar el carrito y la compra
+        uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 30
           arch: x86_64
@@ -121,7 +143,8 @@ jobs:
           profile: pixel_2
           disable-animations: true
           script: cd mobile && bash scripts/ci.sh
-      - uses: actions/upload-artifact@v6
+      - name: Guardar los informes y las capturas de la aplicación
+        uses: actions/upload-artifact@v6
         if: always()
         with:
           name: mobile-evidence
